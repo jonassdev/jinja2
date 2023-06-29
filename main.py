@@ -55,6 +55,3 @@ def delete(request: Request, todo_id: int, db: Session = Depends(get_db)):
     url = app.url_path_for("index")
     return RedirectResponse(url=url, status_code=status.HTTP_302_FOUND)
 
-# @app.get("/items/{item_id}")
-# def read_item(item_id: int, q: Union[str, None] = None):
-#     return {"item_id": item_id, "q": q}
